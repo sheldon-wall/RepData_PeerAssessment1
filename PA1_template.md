@@ -108,7 +108,7 @@ abline(v=mean_steps, col="steelblue", lwd=2, lty=1)
 mtext(as.integer(mean_steps), side = 1, at = mean_steps, col="red")
 ```
 
-![](PA1_template_files/figure-html/Plot histogram 1-1.png)<!-- -->
+![](PA1_template_files/figure-html/Plot1-1.png)<!-- -->
 
 The value of mean total number of steps taken per day is: 10766
 
@@ -146,7 +146,7 @@ abline(v=highest_interval, col="steelblue", lwd=2)
 mtext(highest_interval, side = 1, at = highest_interval, col="red")
 ```
 
-![](PA1_template_files/figure-html/Plot time series 1-1.png)<!-- -->
+![](PA1_template_files/figure-html/Plot2-1.png)<!-- -->
 
 The 5 minute interval with highest value is: 835
 
@@ -216,7 +216,7 @@ abline(v=mean_steps, col="steelblue", lwd=2, lty=1)
 mtext(as.integer(mean_steps), side = 1, at = mean_steps, col="red")
 ```
 
-![](PA1_template_files/figure-html/plot histogram 2-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot3-1.png)<!-- -->
 
 Note that the shape of the data has not dramatically changed with the imputed data 
 This is preferred and therefore confirms the stability of the method.
@@ -247,7 +247,7 @@ xyplot(Average_steps~interval | day_type, data=activity_interval, type = 'l', la
        xlab = "Interval", ylab="Number of Steps", main = "Activity Pattern Comparison" )
 ```
 
-![](PA1_template_files/figure-html/plot two panels for activity comparison-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot4-1.png)<!-- -->
 
 There are definitely differences between activites on weekdays and weekends.
 There is more of a gradual slope to acheiving the peak to activity on a weekend.  
