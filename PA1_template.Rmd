@@ -49,7 +49,9 @@ median_steps <- median(activity_summary$Total_steps)
 
 mean_steps
 median_steps
+```
 
+```{r Plot histogram 1}
 ## plot a histogram of the total steps per day
 hist(activity_summary$Total_steps, main="Histogram of total number of steps per day", 
      xlab = "Total number of steps in a day")
@@ -66,7 +68,6 @@ Calculate the interval that contains the highest number of steps and create a ti
 series plot showing those details.
 
 ```{r Average Daily Act Pattern}
-
 ## What is the average daily activity pattern
 activity_interval <- activity %>%
     filter(!is.na(steps)) %>%
@@ -76,7 +77,9 @@ activity_interval <- activity %>%
 ## identify highest 5 minute interval
 highest_interval <- activity_interval$interval[which.max(activity_interval$Average_steps)]
 highest_interval
+```
 
+```{r Plot time series 1}
 with(activity_interval, 
     plot(interval, Average_steps, type='l', col='black', 
          ylab = "Steps Taken",
@@ -127,8 +130,10 @@ median_steps <- median(activity_summary$Total_steps)
 
 mean_steps
 median_steps
+```
 
-## plot a histogram of the steps per day
+```{r plot histogram 2}
+## plot a histogram of the steps per day with imputed data
 hist(activity_summary$Total_steps, main="Histogram of total number of steps per day - imputed data", 
      xlab = "Total number of steps in a day")
 abline(v=mean_steps, col="steelblue", lwd=2, lty=1)
@@ -154,7 +159,9 @@ activity_fix$day_type = factor(activity_fix$day_type,levels=c("weekday", "weeken
 activity_interval <- activity_fix %>%
     group_by(day_type, interval) %>%
     summarise(Average_steps=mean(steps))
+```
 
+```{r plot two panels for activity comparison}
 ## plot two panels with activity 
 xyplot(Average_steps~interval | day_type, data=activity_interval, type = 'l', layout=c(1,2), 
        xlab = "Interval", ylab="Number of Steps", main = "Activity Pattern Comparison" )
