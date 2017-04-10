@@ -107,7 +107,7 @@ abline(v=mean_steps, col="steelblue", lwd=2, lty=1)
 mtext(as.integer(mean_steps), side = 1, at = mean_steps, col="red")
 ```
 
-![](PA1_template_files/figure-html/Determine Mean Total-1.png)<!-- -->
+![](./PA1_template_files/figure-html/Determine Mean Total-1.png)<!-- -->
 
 The value of mean total number of steps taken per day is: 10766
 
@@ -144,7 +144,7 @@ abline(v=highest_interval, col="steelblue", lwd=2)
 mtext(highest_interval, side = 1, at = highest_interval, col="red")
 ```
 
-![](PA1_template_files/figure-html/Average Daily Act Pattern-1.png)<!-- -->
+![](./PA1_template_files/figure-html/Average Daily Act Pattern-1.png)<!-- -->
 
 The 5 minute interval with highest value is: 835
 
@@ -213,7 +213,7 @@ abline(v=mean_steps, col="steelblue", lwd=2, lty=1)
 mtext(as.integer(mean_steps), side = 1, at = mean_steps, col="red")
 ```
 
-![](PA1_template_files/figure-html/Impute Missing Values-1.png)<!-- -->
+![](./PA1_template_files/figure-html/Impute Missing Values-1.png)<!-- -->
 
 Note that the shape of the data has not dramatically changed with the imputed data 
 This is preferred and therefore confirms the stability of the method.
@@ -241,7 +241,7 @@ xyplot(Average_steps~interval | day_type, data=activity_interval, type = 'l', la
        xlab = "Interval", ylab="Number of Steps", main = "Activity Pattern Comparison" )
 ```
 
-![](PA1_template_files/figure-html/Compare Activity Patterns-1.png)<!-- -->
+![](./PA1_template_files/figure-html/Compare Activity Patterns-1.png)<!-- -->
 
 There are definitely differences between activites on weekdays and weekends.
 There is more of a gradual slope to acheiving the peak to activity on a weekend.  
